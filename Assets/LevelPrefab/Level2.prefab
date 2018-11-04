@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 114337298698236028}
   m_Layer: 0
   m_Name: Timer
-  m_TagString: Untagged
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screentap: 323
+  TimeScript: {fileID: 0}
 --- !u!114 &114873018978772116
 MonoBehaviour:
   m_ObjectHideFlags: 1
