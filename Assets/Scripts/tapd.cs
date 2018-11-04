@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class tapd : MonoBehaviour {
 
+    public LevelScript LevelMaster;
+
     public static string objname;
     public GameObject objtext;
-    public Transform objtextpos;
     public Transform tapconfirm;
     //public static int gameObject = 5;
 
@@ -14,35 +15,21 @@ public class tapd : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        LevelMaster = GameObject.FindGameObjectWithTag("LevelMaster").GetComponent<LevelScript>();
+    }
 
     void OnMouseDown()
     {
 
         objname = gameObject.name;
-
+        LevelMaster.Score++;
         //RECTANGLE
 
-        if ((gameObject.name == "rectangle") && (remainrectangle > 1))
-        {
-            remainrectangle -= 1;
-            objtext.GetComponent<TextMesh> ().text = "rectangle " + remainrectangle;
-            //Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            Destroy(objtext);
-            //gameObject -=1;
-        }
-
-  
         Destroy(gameObject);
         Destroy(objtext);
         //gameObject -=1;
@@ -50,7 +37,7 @@ public class tapd : MonoBehaviour {
 
 
         tapcount.taptot = 0;
-        Instantiate (tapconfirm, objtextpos.transform.position, tapconfirm.rotation);
+        Instantiate (tapconfirm, objtext.transform.position, tapconfirm.rotation);
     }
 
 }
