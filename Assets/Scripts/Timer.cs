@@ -10,11 +10,19 @@ public class Timer : MonoBehaviour
     public Text countdownText;
     public GameObject GameOver;
     public string NamaScene;
+    public cameraMovement MainCameraMov;
+
+    public GameObject[] Tapdlistg;
+    public bool TimerOn;
 
     // Use this for initialization
     void Start()
     {
         StartCoroutine("LoseTime");
+        MainCameraMov = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraMovement>();
+
+        Tapdlistg = GameObject.FindGameObjectsWithTag("Object");
+        TimerOn = true;
     }
 
     // Update is called once per frame
@@ -22,12 +30,17 @@ public class Timer : MonoBehaviour
     {
         countdownText.text = ("" + timeLeft);
 
-        if (timeLeft <= 0)
+        if (timeLeft <= 0 && TimerOn==true)
         {
             StopCoroutine("LoseTime");
             countdownText.text = "Time's Up!";
-            GameOver.GetComponent<Canvas>().enabled = true;
-            SceneManager.LoadScene(NamaScene);
+            GameOver.SetActive(true);
+            MainCameraMov.enabled = false;
+            for (int i = 0; i < Tapdlistg.Length;i++){
+                Tapdlistg[i].GetComponent<tapd>().SendMessageUpwards("removeThisScript");
+            }
+            //SceneManager.LoadScene(NamaScene);
+            TimerOn = false;
         }
             
     }

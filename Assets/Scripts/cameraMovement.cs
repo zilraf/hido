@@ -20,11 +20,11 @@ public class cameraMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if ((Input.mousePosition.x > screenWidth - offset) && transform.position.x < minMaxXPosition.y)
+        if ((Input.mousePosition.x > screenWidth/4*3) && transform.position.x < minMaxXPosition.y)
         {
             cameraMove.x += MoveSpeed();
         }
-        if ((Input.mousePosition.x < offset) && transform.position.x > minMaxXPosition.x)
+        if ((Input.mousePosition.x < screenWidth/4) && transform.position.x > minMaxXPosition.x)
         {
             cameraMove.x -= MoveSpeed();
         }

@@ -20,8 +20,8 @@ public class tapd : MonoBehaviour {
         LevelMaster = GameObject.FindGameObjectWithTag("LevelMaster").GetComponent<LevelScript>();
     }
 
-    void OnMouseDown()
-    {
+    public void OnMouseDown(){
+        Debug.Log("touched");
 
         objname = gameObject.name;
         LevelMaster.Score++;
@@ -31,7 +31,12 @@ public class tapd : MonoBehaviour {
 
 
         tapcount.taptot = 0;
-        Instantiate (tapconfirm, objtext.transform.position, tapconfirm.rotation);
+        Instantiate(tapconfirm, objtext.transform.position, tapconfirm.rotation);
+
     }
 
+    void removeThisScript(){
+        Debug.Log("script removed");
+        Destroy(this);
+    }
 }
