@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public int timeLeft = 90;
     public Text countdownText;
+    public GameObject GameOver;
+    public string NamaScene;
 
     // Use this for initialization
     void Start()
@@ -23,7 +26,9 @@ public class Timer : MonoBehaviour
         {
             StopCoroutine("LoseTime");
             countdownText.text = "Time's Up!";
+            //SceneManager.LoadScene(NamaScene);
         }
+            
     }
 
     IEnumerator LoseTime()
