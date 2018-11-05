@@ -26,7 +26,8 @@ public class Timer : MonoBehaviour
         {
             StopCoroutine("LoseTime");
             countdownText.text = "Time's Up!";
-            //SceneManager.LoadScene(NamaScene);
+            GameOver.GetComponent<Canvas>().enabled = true;
+            SceneManager.LoadScene(NamaScene);
         }
             
     }

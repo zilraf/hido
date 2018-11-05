@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\cameraMovement.cs" />
     <Compile Include="Assets\Scripts\ChangeSceneScript.cs" />
     <Compile Include="Assets\Scripts\LevelScript.cs" />
-    <Compile Include="Assets\Scripts\Main.cs" />
     <Compile Include="Assets\Scripts\tapcount.cs" />
     <Compile Include="Assets\Scripts\tapd.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
