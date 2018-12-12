@@ -61,8 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LevelCreator.cs" />
-    <Compile Include="Assets\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\cameraMovement.cs" />
     <Compile Include="Assets\Scripts\ChangeSceneScript.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
@@ -72,7 +70,9 @@
     <Compile Include="Assets\Scripts\Energy.cs" />
     <Compile Include="Assets\Scripts\GameMenuScript.cs" />
     <Compile Include="Assets\Scripts\inputName.cs" />
+    <Compile Include="Assets\Scripts\LevelCreator.cs" />
     <Compile Include="Assets\Scripts\LevelScript.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\tapcount.cs" />
     <Compile Include="Assets\Scripts\tapd.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />

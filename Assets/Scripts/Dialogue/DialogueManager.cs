@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour {
 
 	public Text nameText;
 	public Text dialogueText;
+    public string SceneName;
 
 	public Animator animator;
 
 	private Queue<string> sentences;
+    public LevelSelect LVLSLCT;
+    public int nomorlevel;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		sentences = new Queue<string>();
-	}
+        LVLSLCT = GameObject.Find("LevelSelect").GetComponent<LevelSelect>();
+    }
 
 	public void StartDialogue (Dialogue dialogue)
 	{
@@ -56,9 +61,17 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
-	void EndDialogue()
+    public void ChangeScene(string SceneName)
+    {
+        //LVLSLCT.nomorlevel = nomorlevel;
+        SceneManager.LoadScene(SceneName);
+    }
+
+    void EndDialogue()
 	{
-		animator.SetBool("IsOpen", false);
-	}
+		animator.SetBool("IsOpen", false); 
+        LVLSLCT.nomorlevel = nomorlevel;
+        SceneManager.LoadScene(SceneName);
+    }
 
 }

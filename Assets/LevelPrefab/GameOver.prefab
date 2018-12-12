@@ -64,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1912074038185734
 GameObject:
   m_ObjectHideFlags: 1
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4742a156cbeef264b8455e02984f64cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GameMenu
+  SceneName: Stages
   nomorlevel: 0
   LVLSLCT: {fileID: 0}
 --- !u!114 &114602956395785208
@@ -267,7 +267,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenu
+          m_StringArgument: Stages
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

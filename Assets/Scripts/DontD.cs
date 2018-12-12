@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class DontD : MonoBehaviour {
 
+    public static DontD instance;
+
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+
+        DontDestroyOnLoad(this);
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
 }

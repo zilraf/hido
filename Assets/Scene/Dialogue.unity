@@ -113,6 +113,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &153184459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153184462}
+  - component: {fileID: 153184461}
+  - component: {fileID: 153184460}
+  m_Layer: 0
+  m_Name: LevelSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &153184460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153184459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3025f27675fc4b5bbf50d79e42aba03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &153184461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153184459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13afafb840f03457895d08af21ba31bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomorlevel: 0
+--- !u!4 &153184462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153184459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 87.5, y: 155.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194053685
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +601,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1845476597}
   dialogueText: {fileID: 1693065541}
+  SceneName: r3
   animator: {fileID: 1741239113}
+  LVLSLCT: {fileID: 0}
+  nomorlevel: 1
 --- !u!4 &1228552699
 Transform:
   m_ObjectHideFlags: 0
@@ -905,6 +961,7 @@ MonoBehaviour:
     sentences:
     - Hey there!...
     - I'm here to guide you through your adventures...
+    - Let's try!
 --- !u!1 &1845476595
 GameObject:
   m_ObjectHideFlags: 0
