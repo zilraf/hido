@@ -7,9 +7,9 @@ public class LevelScript : MonoBehaviour {
 
     public int TotalScore;
     public int Score;
-    //public Transform NextScene;
-    //public bool MainMenu;
-    //public Timer TimeScript;
+    public Transform NextScene;
+    public bool MainMenu;
+    public Timer TimeScript;
 
     //temporary
     public string NamaScene;
@@ -26,7 +26,7 @@ public class LevelScript : MonoBehaviour {
                 SceneManager.LoadScene(NamaScene);
           
                 //kalo mau spawn level baru
-                //Instantiate(NextScene);
+                Instantiate(NextScene);
                 Destroy(gameObject);
             
 

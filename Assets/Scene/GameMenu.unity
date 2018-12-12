@@ -163,6 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: MainMenu
+  nomorlevel: 0
+  LVLSLCT: {fileID: 0}
 --- !u!114 &158655541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,13 +206,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 158655540}
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -690,13 +692,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 736580310}
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Stages
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -741,12 +743,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736580305}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4742a156cbeef264b8455e02984f64cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: r3
+  SceneName: Stages
+  nomorlevel: 0
+  LVLSLCT: {fileID: 0}
 --- !u!1 &1077294672
 GameObject:
   m_ObjectHideFlags: 0
